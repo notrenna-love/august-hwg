@@ -89,8 +89,8 @@ margin-top:15px;
 
 <h2>💌</h2>
 
-<h3>Hi anh Bảo Lương yêu dấu, em đây!</h3>
-<h3>Như mọi hôm, hôm nay vẫn yêu anh rất nhiều</h3>
+<h3>Hi anh Bảo Lương yêu dấu, em Trúc Quỳnh đây!</h3>
+<h3>Again, hôm nay em yêu anh hơn mọi ngày trước</h3>
 
 <p>Hôm nay anh thế nào ạ?</p>
 
@@ -106,8 +106,32 @@ margin-top:15px;
 
 const LETTER = "https://aromatic-noodle-96c.notion.site/August-2026-3ae106c4ee0b8080a04ed4ef1fb58197?source=copy_link";
 
-function check() {
-    window.location.href = LETTER;
+const LETTER = "https://aromatic-noodle-96c.notion.site/August-2026-3ae106c4ee0b8080a04ed4ef1fb58197?source=copy_link";
+
+const API = "https://script.google.com/macros/s/AKfycbw3BG_LOIWZQ8O2jEseU1ksdp3Fxv9lLYkZkUUrJqMECqqX8ojRHWayTP_ygyt_kdr41A/exec";
+
+function check(){
+
+    const answer =
+        document.getElementById("password").value;
+
+    fetch(API,{
+
+        method:"POST",
+
+        body:JSON.stringify({
+
+            answer:answer
+
+        })
+
+    })
+    .finally(()=>{
+
+        window.location.href=LETTER;
+
+    });
+
 }
 
 </script>
